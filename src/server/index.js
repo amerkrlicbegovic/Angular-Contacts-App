@@ -8,7 +8,7 @@ require('dotenv').config();
 app.use(bodyParser.json());
 
 let database;
-
+//get request
 app.get('/api/contacts', (req, res) => {
 
   const contactsCollection = database.collection('contacts');
@@ -18,7 +18,7 @@ app.get('/api/contacts', (req, res) => {
   });
 
 });
-
+//post request
 app.post('/api/contacts', (req, res) => {
   const user = req.body;
 
